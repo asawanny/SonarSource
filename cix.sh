@@ -7,9 +7,7 @@ echo "Running with SQ=$SQ_VERSION for $CI_BUILD_NUMBER"
   echo $NEW_VERSION
   mkdir -p target
   cd target
-  echo https://repox.sonarsource.com/sonarsource-public-qa/org/sonarsource/scanner/sonar-maven-plugin/$NEW_VERSION/sonar-maven-plugin-$NEW_VERSION.jar
-  curl --user $ARTIFACTORY_QA_READER_USERNAME:$ARTIFACTORY_QA_READER_PASSWORD -sSLO https://repox.sonarsource.com/sonarsource-public-qa/org/sonarsource/scanner/sonar-maven-plugin/$NEW_VERSION/sonar-maven-plugin-$NEW_VERSION.jar
-
+  curl --user $ARTIFACTORY_QA_READER_USERNAME:$ARTIFACTORY_QA_READER_PASSWORD -sSLO https://repox.sonarsource.com/sonarsource-public-qa/org/sonarsource/scanner/maven/sonar-maven-plugin/$NEW_VERSION/sonar-maven-plugin-$NEW_VERSION.jar
   cd ..
 
   # Need install because mvn org.sonarsource.scanner.maven:sonarqube-maven-plugin:<version>:sonar in ITs will take artifact from local repo
