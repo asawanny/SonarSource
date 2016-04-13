@@ -12,7 +12,7 @@ echo "Running with SQ=$SQ_VERSION for $CI_BUILD_NUMBER"
 
   # Need install because mvn org.sonarsource.scanner.maven:sonarqube-maven-plugin:<version>:sonar in ITs will take artifact from local repo
   #mvn install -B -e -V -Dsource.skip=true -Denforcer.skip=true -Danimal.sniffer.skip=true -Dmaven.test.skip=true
-  mvn install:install-file -Dfile=sonar-maven-plugin/target/sonar-maven-plugin-$NEW_VERSION.jar
+  mvn install:install-file -Dfile=target/sonar-maven-plugin-$NEW_VERSION.jar
 
 
 
